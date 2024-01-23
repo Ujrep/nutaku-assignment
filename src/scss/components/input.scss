@@ -1,0 +1,31 @@
+
+.input-group {
+    position: relative;
+    display: block;
+    
+    margin: auto;
+    width: 100%;
+
+    border-bottom: 2px solid $color-warm-grey;
+}
+
+.input {
+    appearance: none;
+    outline: none;
+
+    width: 100%;
+    padding: 8px 16px 8px 0;
+    border: 0;
+    border-radius: 16px;
+    
+    transition: all .15s ease;
+    background: none;
+
+    font-size: 18px;
+    color: #223254;
+    font-family: 'OpenSans';
+
+    &:placeholder {
+        color: $color-light-grey;
+    }
+}

@@ -1,0 +1,39 @@
+.header {
+    width: 100%;
+    background-image: url('src/assets/images/header-img-mobile.png');
+    height: 374px;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding: 20px 30px 20px 68px;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: 44px 0;
+        text-align: center;
+
+        background-image: url('src/assets/images/header-img-tablet.png');
+    }
+}
+
+.header-subtitle {
+    margin-bottom: 14px;
+
+    font-size: 22px;
+    color: $color-pink;
+    text-transform: uppercase;
+    font-family: 'Gotham';
+}
+
+.header-title {
+    margin-bottom: 30px;
+
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 77px;
+    font-family: 'BebasNeue';
+    font-weight: 700;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: 0 30%;
+    }
+}

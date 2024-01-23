@@ -1,0 +1,43 @@
+.footer {
+    width: 100%;
+    padding: 36px 56px;
+
+    background: $color-black;
+    
+    text-align: center;
+}
+
+.footer-subtitle {
+    margin-bottom: 14px;
+
+    font-size: 22px;
+    color: $color-pink;
+    text-transform: uppercase;
+    font-family: 'Gotham';
+}
+
+.footer-title {
+    margin-bottom: 30px;
+
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 77px;
+    font-family: 'BebasNeue';
+    font-weight: 700;
+}
+
+.footer-buttons {
+    margin-bottom: 36px;
+
+    @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 72px;
+    }
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    
+    height: 40px;
+}

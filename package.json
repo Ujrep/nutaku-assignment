@@ -1,0 +1,21 @@
+{
+  "name": "nutaku-assignment",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ./src --ext js --quiet"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5",
+    "sass": "^1.43.5",
+    "vite": "^2.6.13"
+  },
+  "dependencies": {
+    "eslint": "8.45.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "prettier": "3.0.3"
+  }
+}

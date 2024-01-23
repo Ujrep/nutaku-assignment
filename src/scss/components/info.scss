@@ -1,0 +1,114 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    width: 100%;
+    padding: 36px 0;
+
+    background: $color-white;
+
+    @media (min-width: $breakpoint-desktop) {
+        flex-direction: row-reverse;
+        align-items: center;
+
+        padding: 36px 10%;
+    }
+}
+
+.info-texts {
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+}
+
+.info-text {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    padding: 0 24px;
+    flex-direction: column;
+
+    &--black {
+        padding: 36px 10%;
+
+        background-color: $color-black;
+        color: $color-white;
+        text-align: center;
+    }
+}
+
+.info-title {
+    font-family: 'BebasNeue';
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 54px;
+    text-align: center;
+}
+
+.info-description {
+    font-family: 'OpenSans';
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.info-headline {
+    padding: 0 24px;
+
+    color: $color-pink;
+    font-size: 24px;
+    font-family: 'OpenSans';
+    font-weight: 700;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: 0.30px;
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: 0;
+
+        font-size: 20px;
+    }
+}
+
+.info-restocking {
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    transform: rotate(-20deg);
+
+    padding: 12px 24px;
+
+    width: 240px;
+
+    background: $color-pink;
+    border: 5px solid $color-white;
+    border-radius: 16px;
+    
+    font-family: 'OpenSans';
+    font-weight: 700;
+    font-size: 24px;
+    color: $color-white;
+
+    @media (min-width: $breakpoint-tablet) {
+        bottom: auto;
+        top: 25%;
+    }
+}
+
+.info-contact {
+    padding: 0 72px;
+    
+    font-family: 'OpenSans';
+    font-style: italic;
+    color: $color-greyish-brown;
+    text-align: center;
+}
+
+.info-email {
+    display: block;
+    font-family: 'OpenSans';
+    font-weight: 700;
+    font-size: 24px;
+    color: $color-pink;
+}
+

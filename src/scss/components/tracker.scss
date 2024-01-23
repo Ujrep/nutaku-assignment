@@ -1,0 +1,283 @@
+.tracker {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 36px 0;
+
+    background: $color-white;
+    
+    text-align: center;
+
+    @media (min-width: $breakpoint-desktop) {
+        flex-direction: row;
+        gap: 48px;
+        padding: 36px 10%;
+    }
+}
+
+.tracker-items {
+    flex-grow: 1;
+}
+
+.tracker-item {
+    display: grid;
+    gap: 16px;
+
+    padding: 16px 0;
+
+    border-bottom: 5px solid $color-light-grey;
+
+    &:first-child {
+        border-top: 5px solid $color-light-grey;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        display: grid;
+        grid-template-columns: 30% 30% 40%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        border-left: 5px solid $color-light-grey;
+        border-right: 5px solid $color-light-grey;
+    }
+}
+
+.tracker-logo {
+    width: auto;
+    height: 82px;
+
+    margin: 0 auto;
+
+    @media (min-width: $breakpoint-tablet) {
+        order: 2;
+    }
+}
+
+.tracker-title {
+    font-family: "OpenSans";
+    font-weight: 700;
+
+    @media (min-width: $breakpoint-tablet) {
+        order: 3;
+        justify-self: start;
+    }
+}
+
+.tracker-status {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: $breakpoint-tablet) {
+        flex-direction: column-reverse;
+        order: 1;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        flex-direction: row-reverse;
+        gap: 32px;
+        justify-self: end;
+        align-items: center;
+        order: 1;
+    }
+}
+
+.tracker-bubble {
+    width: 38px;
+    height: 38px;
+
+    margin: 0 auto;
+
+    border: 5px solid black;
+    border-radius: 50%;
+
+    &--progress {
+        background-color: $color-orangeish;
+    }
+    
+    &--done {
+        background-color: $color-kiwi-green;
+    }
+}
+
+.tracker-statusText {
+    font-family: "OpenSans";
+    font-weight: 700;
+    color: $color-grey;
+}
+
+.tracker-bottle {
+    position: relative;
+    padding: 36px 0;
+    margin: 0 auto;
+    width: 260px;
+    height: 700px;
+}
+
+.tracker-bottleCap {
+    height: 10%;
+    width: 40%;
+    margin: 0 auto 15px;
+
+    background-color: $color-black;
+
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+}
+
+.tracker-bottleTop {
+    position: relative;
+    z-index: 10;
+
+    height: 25%;
+    width: 40%;
+    margin: 0 auto;
+
+    background-color: $color-white;
+    border: 10px solid $color-black;
+    border-bottom: none;
+
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+
+    &--fill {
+        background-color: $color-red;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        
+        width: 8px;
+        height: 75%;
+
+        background-color: $color-black;
+        border-radius: 24px;
+    }
+}
+
+.tracker-bottleBottom {
+    position: relative;
+    top: -2%;
+    height: 70%;
+    width: 80%;
+    margin: 0 auto;
+
+    border: 10px solid $color-black;
+
+    border-top-right-radius: 35%;
+    border-top-left-radius: 35%;
+
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+        z-index: 20;
+        
+        width: 8px;
+        height: 20%;
+
+        background-color: $color-black;
+        border-radius: 24px;
+    }
+}
+
+.tracker-bottleLabel {
+    position: relative;
+    top: 28%;
+    z-index: 10;
+    
+    transform: rotate(45deg) skew(15deg, 15deg);
+    
+    width: 100%;
+    border: 10px solid $color-black;
+    
+    background-color: $color-white;
+    aspect-ratio: 1;
+}
+
+.tracker-bottleLabelSide {
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: 20%;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 14%;
+        left: 0;
+        top: 0;
+        background: $color-white;
+        border-top: 10px solid $color-black;
+        border-bottom: 10px solid $color-black;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 14%;
+        right: 0;
+        top: 0;
+        background: $color-white;
+        border-top: 10px solid $color-black;
+        border-bottom: 10px solid $color-black;
+    }
+}
+
+.tracker-bottleFiller {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    width: 100%;
+    
+    background-color: $color-red;
+
+    &--level0 {
+        height: 5%;
+    }
+
+    &--level1 {
+        height: 10%;
+    }
+
+    &--level2 {
+        height: 30%;
+    }
+
+    &--level3 {
+        height: 50%;
+    }
+
+    &--level4 {
+        height: 70%;
+    }
+
+    &--level5 {
+        height: 80%;
+    }
+
+    &--level6 {
+        height: 100%;
+    }
+}
+
+

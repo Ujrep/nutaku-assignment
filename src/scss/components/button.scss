@@ -1,0 +1,27 @@
+.button {
+    padding: 18px 28px;
+
+    border-radius: 8px;
+    border: 2px solid $color-pink;
+    
+    background: transparent;
+    
+    color: $color-pink;
+    font-size: 24px;
+    font-family: 'Gotham';
+    line-height: 18px;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+
+    &--small {
+        padding: 6px 12px;
+        
+        font-size: 18px;
+    }
+
+    &--secondary {
+        border: 2px solid $color-light-grey;
+        color: $color-light-grey;
+    }
+}

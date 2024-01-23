@@ -1,0 +1,25 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "extends": [
+        "eslint:recommended", 
+        "plugin:prettier/recommended"
+    ],
+    "rules": {
+        "curly": 2,
+        "no-use-before-define": 1,
+        "no-console": ["error", { "allow": ["error"] }] ,
+        "no-nested-ternary": 1,
+        "no-case-declarations": 1,
+        "no-unused-vars": "off",
+    },
+    "globals": {
+        "process": true
+    }
+}
